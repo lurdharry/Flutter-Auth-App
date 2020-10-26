@@ -1,9 +1,7 @@
 import 'package:TestApp/common/ButtonWidget.dart';
-import 'package:TestApp/common/text.dart';
 import 'package:TestApp/common/textInput.dart';
 import 'package:TestApp/common/util.dart';
 import 'package:TestApp/screens/Login/components/doubleColorText.dart';
-import 'package:TestApp/screens/Login/components/doubleText.dart';
 import 'package:TestApp/screens/Login/components/topImage.dart';
 import 'package:flutter/material.dart';
 
@@ -24,7 +22,7 @@ class _BodyState extends State<Body> {
       child: Container(
         child: Column(
           children:<Widget>[
-            topImage(),
+            TopImage(),
             Padding(
               padding: EdgeInsets.fromLTRB(wp(34), hp(50), wp(34), 0),
               child: Column(
@@ -53,7 +51,7 @@ class _BodyState extends State<Body> {
                     titleColor: Colors.white,
                   ),
                   SizedBox(height:hp(20)),
-                   new doubleColorText(
+                   new DoubleColorText(
                     title:'New user?',
                     subTitle: 'Signup',
                   )

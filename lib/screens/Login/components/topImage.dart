@@ -2,7 +2,7 @@ import 'package:TestApp/common/util.dart';
 import 'package:TestApp/screens/Login/components/doubleText.dart';
 import 'package:flutter/material.dart';
 
-class  topImage extends StatelessWidget {
+class  TopImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
       var assetsImage = new AssetImage('assets/images/Shape.png');
