@@ -18,6 +18,11 @@ InputDecorationTheme inputDecorationTheme() {
     borderSide: BorderSide(color: Colors.black),
     gapPadding: 10,
   );
+    OutlineInputBorder focucused = OutlineInputBorder(
+    borderRadius: BorderRadius.circular(28),
+    borderSide: BorderSide(color: Colors.red),
+    gapPadding: 10,
+  );
   return InputDecorationTheme(
     // If  you are using latest version of flutter then lable text and hint text shown like this
     // if you r using flutter less then 1.20.* then maybe this is not working properly
@@ -25,7 +30,7 @@ InputDecorationTheme inputDecorationTheme() {
     // floatingLabelBehavior: FloatingLabelBehavior.always,
     contentPadding: EdgeInsets.symmetric(horizontal: 42, vertical: 20),
     enabledBorder: outlineInputBorder,
-    focusedBorder: outlineInputBorder,
+    focusedBorder: focucused,
     border: outlineInputBorder,
   );
 }

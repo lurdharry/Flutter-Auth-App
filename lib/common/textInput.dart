@@ -35,14 +35,14 @@ class TextFieldWidget extends StatelessWidget {
           color: Colors.red
         ),
         filled: true,
-        enabledBorder: UnderlineInputBorder(
-          borderSide: BorderSide.none,
-          borderRadius: BorderRadius.circular(10)
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10),
-          borderSide: BorderSide(color: Colors.redAccent)
-          ),
+        // enabledBorder: UnderlineInputBorder(
+        //   borderSide: BorderSide.none,
+        //   borderRadius: BorderRadius.circular(10)
+        // ),
+        // focusedBorder: OutlineInputBorder(
+        //   borderRadius: BorderRadius.circular(10),
+        //   borderSide: BorderSide(color: Colors.redAccent)
+        //   ),
         suffixIcon: Icon(
           suffixIconData,
           size:18,

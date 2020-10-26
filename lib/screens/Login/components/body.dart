@@ -2,6 +2,9 @@ import 'package:TestApp/common/ButtonWidget.dart';
 import 'package:TestApp/common/text.dart';
 import 'package:TestApp/common/textInput.dart';
 import 'package:TestApp/common/util.dart';
+import 'package:TestApp/screens/Login/components/doubleColorText.dart';
+import 'package:TestApp/screens/Login/components/doubleText.dart';
+import 'package:TestApp/screens/Login/components/topImage.dart';
 import 'package:flutter/material.dart';
 
 class Body extends StatefulWidget {
@@ -16,55 +19,22 @@ class _BodyState extends State<Body> {
  
   @override
   Widget build(BuildContext context) {
-    MediaQueryData uuu = MediaQuery.of(context);
-    double hei = uuu.size.width;
-    var assetsImage = new AssetImage('assets/images/Shape.png');
-    var image = new Image(image: assetsImage, width: 220.0, height: 220.0);
+  
     return SafeArea(
       child: Container(
-        // height: MediaQuery. of(context).size.height,
-        // margin: EdgeInsets.only(top:Platform.isIOS?45:0),
         child: Column(
           children:<Widget>[
-              Container(
-                height: 220,
-                child: new Stack(          
-                  children: [
-                    Positioned(
-                      right:-20,
-                      child: image
-                    ),
-                    new Positioned(
-                      bottom: 8,
-                      left: 20,
-                      child:   new CustomText(
-                          isTap: false,
-                          title: hp(56).toString(),
-                          fontsize: 30,
-                        ) ,)
-                  ],
-                ),
-              ),
+            topImage(),
             Padding(
-              padding: EdgeInsets.fromLTRB(20, 5, 20, 0),
+              padding: EdgeInsets.fromLTRB(wp(34), hp(50), wp(34), 0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[                
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children:<Widget> [
-                         new CustomText(
-                          isTap: false,
-                          title: 'Login to your account',
-                          fontsize: 14,
-                        ),
-                      ],),
-                    // ),
                     SizedBox(height:10.0),
                   Padding(
                     padding: const EdgeInsets.only(top: 30),
                     child: TextFieldWidget(
-                      hintext:SizeConfig.orientation.toString(),
+                      hintext:'Email',
                       prefixIconData: Icons.email_outlined,
                       obscText: false,
                     ),
@@ -74,7 +44,7 @@ class _BodyState extends State<Body> {
                     hintext:'Password',
                     prefixIconData: Icons.lock_outline,
                     obscText: true,
-        onGhange: (value) => print(SizeConfig.screenWidth),
+                    onGhange: (value) => print(SizeConfig.screenWidth),
                   ),
                   SizedBox(height:40.0),
                   ButtonWidget(
@@ -82,33 +52,14 @@ class _BodyState extends State<Body> {
                     bgColor: Color.fromRGBO(226,95,56 ,1),
                     titleColor: Colors.white,
                   ),
-                  SizedBox(height:10.0),
-
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: <Widget>[
-                        CustomText(
-                          isTap:false,
-                          title:'New user?'
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(left:7),
-                          child: new CustomText(
-                            isTap: true,
-                            title: 'SignUp',
-                            color: Color.fromRGBO(226,95,56 ,1),
-                          ),
-                          )
-                    ],
-                  ),
+                  SizedBox(height:hp(20)),
+                   new doubleColorText(
+                    title:'New user?',
+                    subTitle: 'Signup',
+                  )
                 ]
               ),
               ),
-                   CustomText(
-                          isTap:false,
-                          title:'New user?'
-                        ),
           ],            
         ),
         ),

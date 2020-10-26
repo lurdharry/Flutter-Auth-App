@@ -1,3 +1,5 @@
+import 'package:TestApp/common/color.dart';
+import 'package:TestApp/common/util.dart';
 import 'package:flutter/material.dart';
 
 class ButtonWidget extends StatelessWidget {
@@ -15,10 +17,10 @@ class ButtonWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 400,
-      height: 55,
+      width: double.infinity,
+      height: hp(50),
       decoration: BoxDecoration(
-        color: bgColor,
+        color: Colors.redAccent,
         borderRadius: BorderRadius.circular(10)
         ),
       child: RaisedButton(

@@ -7,7 +7,7 @@ class BottomBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 50,
+      height: hp(56),
       // height: SizeConfig.screenHeight*(0.2),
       decoration: BoxDecoration(
         color: lightBrown,
