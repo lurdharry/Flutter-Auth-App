@@ -2,7 +2,6 @@ import 'package:TestApp/common/ButtonWidget.dart';
 import 'package:TestApp/common/color.dart';
 import 'package:TestApp/common/text.dart';
 import 'package:TestApp/common/util.dart';
-import 'package:TestApp/screens/signUpscreen/signupscreen.dart';
 import 'package:flutter/material.dart';
 
 class SignUpBottomSheet extends StatelessWidget {
@@ -37,8 +36,8 @@ class SignUpBottomSheet extends StatelessWidget {
               title: "CONFIRM",
               onPress: (){
                 Navigator.of(context).pop();
-                      Navigator.pushNamed(context, SignUpScreen.routeName);
-                    },
+                      // Navigator.pushNamed(context, SignUpScreen.routeName);
+              },
               bgColor: lightBrown,
               titleColor: darkBrown,
             ),

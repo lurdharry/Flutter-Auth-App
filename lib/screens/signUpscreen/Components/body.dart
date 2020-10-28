@@ -1,8 +1,10 @@
+import 'package:TestApp/common/BottomSheet.dart';
 import 'package:TestApp/common/ButtonWidget.dart';
 import 'package:TestApp/common/color.dart';
 import 'package:TestApp/common/textInput.dart';
 import 'package:TestApp/common/util.dart';
 import 'package:TestApp/screens/Login/components/doubleColorText.dart';
+import 'package:TestApp/screens/Login/components/modalContetn.dart';
 import 'package:TestApp/screens/Login/components/topImage.dart';
 import 'package:TestApp/screens/Login/login_screen.dart';
 import 'package:flutter/material.dart';
@@ -35,7 +37,7 @@ void initState() {
  
   @override
   Widget build(BuildContext context) {
-  
+    var show = BottomSheetClass();
     return SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -81,10 +83,12 @@ void initState() {
                   // SizedBox(height:hp(25)),
                   SizedBox(height:hp(50)),
                   ButtonWidget(
-                    title:myController.text,
+                    title:"SIGNUP",
                     bgColor: darkBrown,
                     titleColor: Colors.white,
-                    onPress: (){},
+                    onPress: (){
+                      show.body(context, SignUpBottomSheet(), hp(425));
+                    },
                   ),
                   SizedBox(height:hp(20)),
                    new DoubleColorText(

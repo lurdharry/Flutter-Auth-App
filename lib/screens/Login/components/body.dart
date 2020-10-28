@@ -1,11 +1,10 @@
-import 'package:TestApp/common/BottomSheet.dart';
 import 'package:TestApp/common/ButtonWidget.dart';
 import 'package:TestApp/common/color.dart';
 import 'package:TestApp/common/textInput.dart';
 import 'package:TestApp/common/util.dart';
+import 'package:TestApp/screens/Home/homeScreen.dart';
 import 'package:TestApp/screens/Login/components/RadioButton.dart';
 import 'package:TestApp/screens/Login/components/doubleColorText.dart';
-import 'package:TestApp/screens/Login/components/modalContetn.dart';
 import 'package:TestApp/screens/Login/components/topImage.dart';
 import 'package:TestApp/screens/signUpscreen/signupscreen.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +20,6 @@ class _BodyState extends State<Body> {
  
   @override
   Widget build(BuildContext context) {
-    var show = BottomSheetClass();
     return SafeArea(
       child: SingleChildScrollView(
         child: Column(
@@ -56,7 +54,7 @@ class _BodyState extends State<Body> {
                     bgColor: darkBrown,
                     titleColor: Colors.white,
                     onPress: (){
-                      show.fff(context, SignUpBottomSheet(), hp(425));
+                      Navigator.pushNamed(context, HomeScreen.routeName);
                     },
                   ),
                   SizedBox(height:hp(20)),

@@ -9,6 +9,7 @@ class TextFieldWidget extends StatelessWidget {
   final bool obscText;
   final Function onGhange;
   final TextEditingController myCont;
+  final bool nolabel;
 
   const TextFieldWidget({
     Key key, 
@@ -16,7 +17,10 @@ class TextFieldWidget extends StatelessWidget {
     this.prefixIconData, 
     this.suffixIconData, 
     this.obscText, 
-    this.onGhange, this.myCont})
+    this.onGhange, 
+    this.myCont, 
+    this.nolabel=false,
+  })
    : super(key: key);
   
   
@@ -30,8 +34,8 @@ class TextFieldWidget extends StatelessWidget {
       obscureText: obscText,
       style: TextStyle(color: Colors.deepOrangeAccent),
       decoration: InputDecoration(
-        labelText: hintext,
-        // hintText: hintext,
+        labelText: nolabel?null:hintext,
+        hintText: hintext,
         prefixIcon: Icon(
           prefixIconData,
           size:15,

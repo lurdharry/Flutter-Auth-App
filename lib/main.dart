@@ -18,7 +18,6 @@ class MyApp extends StatelessWidget {
       theme: theme(),
       initialRoute: LoginScreen.routeName,
       routes: navigation,
-      // home: MyHomePage(title: 'Flutter Demo Home Pae'),
     );
   }
 }

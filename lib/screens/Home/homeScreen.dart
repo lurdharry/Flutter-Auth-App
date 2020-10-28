@@ -1,4 +1,4 @@
-import 'package:TestApp/common/bottomBox.dart';
+import 'package:TestApp/screens/Home/Components/body.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -6,8 +6,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: null,
-      bottomNavigationBar: BottomBox(), 
+      body: HomeBody(),
     );
   }
 }

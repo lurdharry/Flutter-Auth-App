@@ -7,7 +7,7 @@ class BottomSheetClass {
   static Widget children;
   static double height;
  
- fff(context,children,height) {
+ body(context,children,height) {
     showModalBottomSheet(
       shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.vertical(top: Radius.circular(25.0)),
