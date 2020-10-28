@@ -16,21 +16,20 @@ class ButtonWidget extends StatelessWidget {
     }) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       height: hp(50),
-      decoration: BoxDecoration(
-        color: Colors.redAccent,
-        borderRadius: BorderRadius.circular(10)
-        ),
-      child: RaisedButton(
+      child: FlatButton( 
+        color: bgColor,
         onPressed: onPress,
-        child: Text(title,style: TextStyle(color:titleColor ),),
-        elevation: 5.0,
+        child: Text(title,style: TextStyle(
+            color:titleColor,
+            fontSize: hp(14) 
+        ),
+        ),
         shape: RoundedRectangleBorder(
-          borderRadius:BorderRadius.circular(10),
-          ),
-        
+          borderRadius:BorderRadius.circular(hp(10)),
+          ), 
       ),
     );
   }

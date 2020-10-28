@@ -1,3 +1,5 @@
+
+
 import 'package:flutter/material.dart';
 
 class CustomText extends StatelessWidget {
@@ -6,6 +8,9 @@ class CustomText extends StatelessWidget {
   final bool isTap;
   final Function onTap;
   final double fontsize;
+
+
+
   
   const CustomText({
     Key key, 
@@ -13,7 +18,7 @@ class CustomText extends StatelessWidget {
     this.color, 
     this.isTap, 
     this.onTap, 
-    this.fontsize
+    this.fontsize, 
     }) : super(key: key);
   
   @override
@@ -23,14 +28,17 @@ class CustomText extends StatelessWidget {
         onTap: onTap,
         child: new Text(
           title,
-          style: TextStyle(color: color),
+          style: TextStyle(color: color,
+),
         ),
       )
       :Text(
         title,
+  
         style: TextStyle(
           color: color,
           fontSize: fontsize,
+          
           // fontFamily: 'Graphik-Bold'
         ),
       );

@@ -1,3 +1,4 @@
+import 'package:TestApp/common/color.dart';
 import 'package:flutter/material.dart';
 
 
@@ -20,7 +21,7 @@ InputDecorationTheme inputDecorationTheme() {
   );
     OutlineInputBorder focucused = OutlineInputBorder(
     borderRadius: BorderRadius.circular(28),
-    borderSide: BorderSide(color: Colors.red),
+    borderSide: BorderSide(color: darkBrown),
     gapPadding: 10,
   );
   return InputDecorationTheme(

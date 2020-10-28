@@ -1,3 +1,4 @@
+import 'package:TestApp/common/color.dart';
 import 'package:flutter/material.dart';
 
 class TextFieldWidget extends StatelessWidget {
@@ -7,6 +8,7 @@ class TextFieldWidget extends StatelessWidget {
   final IconData suffixIconData;
   final bool obscText;
   final Function onGhange;
+  final TextEditingController myCont;
 
   const TextFieldWidget({
     Key key, 
@@ -14,7 +16,7 @@ class TextFieldWidget extends StatelessWidget {
     this.prefixIconData, 
     this.suffixIconData, 
     this.obscText, 
-    this.onGhange})
+    this.onGhange, this.myCont})
    : super(key: key);
   
   
@@ -23,6 +25,7 @@ class TextFieldWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
+      controller: myCont,
       onChanged: onGhange,
       obscureText: obscText,
       style: TextStyle(color: Colors.deepOrangeAccent),
@@ -35,18 +38,10 @@ class TextFieldWidget extends StatelessWidget {
           color: Colors.red
         ),
         filled: true,
-        // enabledBorder: UnderlineInputBorder(
-        //   borderSide: BorderSide.none,
-        //   borderRadius: BorderRadius.circular(10)
-        // ),
-        // focusedBorder: OutlineInputBorder(
-        //   borderRadius: BorderRadius.circular(10),
-        //   borderSide: BorderSide(color: Colors.redAccent)
-        //   ),
         suffixIcon: Icon(
           suffixIconData,
           size:18,
-          color: Colors.red
+          color: darkBrown
         ),
         labelStyle: TextStyle(color: Colors.black),
         focusColor: Colors.red,
