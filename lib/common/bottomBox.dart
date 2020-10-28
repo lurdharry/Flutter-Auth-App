@@ -5,7 +5,9 @@ import 'package:flutter/material.dart';
 class BottomBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return 
+    Container(
+      
       width: double.infinity,
       height: hp(56),
       // height: SizeConfig.screenHeight*(0.2),
