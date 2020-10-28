@@ -1,8 +1,13 @@
+import 'package:TestApp/common/BottomSheet.dart';
 import 'package:TestApp/common/ButtonWidget.dart';
+import 'package:TestApp/common/color.dart';
 import 'package:TestApp/common/textInput.dart';
 import 'package:TestApp/common/util.dart';
+import 'package:TestApp/screens/Login/components/RadioButton.dart';
 import 'package:TestApp/screens/Login/components/doubleColorText.dart';
+import 'package:TestApp/screens/Login/components/modalContetn.dart';
 import 'package:TestApp/screens/Login/components/topImage.dart';
+import 'package:TestApp/screens/signUpscreen/signupscreen.dart';
 import 'package:flutter/material.dart';
 
 class Body extends StatefulWidget {
@@ -12,14 +17,13 @@ class Body extends StatefulWidget {
 }
 
 class _BodyState extends State<Body> {
-  String hhh ="shshsh";
-
+   
  
   @override
   Widget build(BuildContext context) {
-  
+    var show = rrrrr();
     return SafeArea(
-      child: Container(
+      child: SingleChildScrollView(
         child: Column(
           children:<Widget>[
             TopImage(),
@@ -44,17 +48,26 @@ class _BodyState extends State<Body> {
                     obscText: true,
                     onGhange: (value) => print(SizeConfig.screenWidth),
                   ),
-                  SizedBox(height:40.0),
+                  SizedBox(height:hp(25)),
+                  RadioButtonRow(),
+                  SizedBox(height:hp(50)),
                   ButtonWidget(
-                    title:'Login',
-                    bgColor: Color.fromRGBO(226,95,56 ,1),
+                    title:'LOGIN',
+                    bgColor: darkBrown,
                     titleColor: Colors.white,
+                    onPress: (){
+                      show.fff(context, SignUpBottomSheet(), hp(425));
+                    },
                   ),
                   SizedBox(height:hp(20)),
                    new DoubleColorText(
                     title:'New user?',
                     subTitle: 'Signup',
-                  )
+                    onPress: (){
+                      Navigator.pushNamed(context, SignUpScreen.routeName);
+                    },
+                    
+                  ),
                 ]
               ),
               ),

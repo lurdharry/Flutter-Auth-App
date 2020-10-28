@@ -3,11 +3,12 @@ import 'package:TestApp/common/text.dart';
 import 'package:TestApp/common/util.dart';
 import 'package:flutter/material.dart';
 
-class doubleColorText extends StatelessWidget {
+class DoubleColorText extends StatelessWidget {
   final String title;
   final String subTitle;
+  final Function onPress;
 
-  const doubleColorText({Key key, this.title, this.subTitle}) : super(key: key);
+  const DoubleColorText({Key key, this.title, this.subTitle, this.onPress}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -28,6 +29,7 @@ class doubleColorText extends StatelessWidget {
         isTap:true,
         title: subTitle,
         color: Colors.redAccent,
+        onTap: onPress,
       ),
      ],
 
