@@ -2,7 +2,7 @@ import 'package:TestApp/common/color.dart';
 import 'package:TestApp/common/util.dart';
 import 'package:flutter/material.dart';
 
-class rrrrr {
+class BottomSheetClass {
   static BuildContext context;
   static Widget children;
   static double height;

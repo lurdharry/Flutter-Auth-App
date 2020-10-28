@@ -1,4 +1,3 @@
-import 'dart:js';
 
 import 'package:TestApp/screens/Home/homeScreen.dart';
 import 'package:TestApp/screens/Login/login_screen.dart';
