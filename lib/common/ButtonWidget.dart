@@ -1,3 +1,4 @@
+import 'package:TestApp/common/text.dart';
 import 'package:TestApp/common/util.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +12,7 @@ class ButtonWidget extends StatelessWidget {
     Key key, 
     this.title, 
     this.onPress,
-    this.bgColor, this.titleColor
+    this.bgColor, this.titleColor=Colors.white
     }) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -21,10 +22,10 @@ class ButtonWidget extends StatelessWidget {
       child: FlatButton( 
         color: bgColor,
         onPressed: onPress,
-        child: Text(title,style: TextStyle(
-            color:titleColor,
-            fontSize: hp(14) 
-        ),
+        child: new CustomText(
+          isTap: false,
+          color: titleColor,
+          title: title,
         ),
         shape: RoundedRectangleBorder(
           borderRadius:BorderRadius.circular(hp(10)),
