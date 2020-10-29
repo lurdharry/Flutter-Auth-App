@@ -14,8 +14,8 @@ class _HomeBodyState extends State<HomeBody> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Padding(
-        padding: EdgeInsets.only(left:0),
+      child: SingleChildScrollView(
+        padding: EdgeInsets.only(top:hp(10)),
         child: Column(
           children:[
             CartIcon(),
@@ -25,7 +25,6 @@ class _HomeBodyState extends State<HomeBody> {
             searchBar(),
             SizedBox(height:hp(20)),
             MianView(),
-
           ]
         ),
       ),
