@@ -69,11 +69,17 @@ flutter:
     - family: Graphik
       fonts:
         - asset: assets/fonts/Graphik-Medium.ttf
+          weight: 400
         - asset: assets/fonts/Graphik-Bold.ttf
+          weight: 600
         - asset: assets/fonts/Graphik-Light.ttf
+          weight: 200
         - asset: assets/fonts/Graphik-Regular.ttf
+          weight: 300
         - asset: assets/fonts/Graphik-Semibold.ttf
+          weight: 500
         - asset: assets/fonts/Graphik-Thin.ttf
+          weight: 100
 
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
