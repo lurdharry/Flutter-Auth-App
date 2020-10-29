@@ -1,6 +1,7 @@
 import 'package:TestApp/common/textInput.dart';
 import 'package:TestApp/common/util.dart';
 import 'package:TestApp/screens/Home/Components/cartIcon.dart';
+import 'package:TestApp/screens/Home/Components/scrollContent.dart';
 import 'package:TestApp/screens/Home/Components/welcome.dart';
 import 'package:flutter/material.dart';
 
@@ -14,9 +15,7 @@ class _HomeBodyState extends State<HomeBody> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Padding(
-        padding: EdgeInsets.symmetric(
-          horizontal:wp(34)
-        ),
+        padding: EdgeInsets.only(left:0),
         child: Column(
           children:[
             CartIcon(),
@@ -24,6 +23,8 @@ class _HomeBodyState extends State<HomeBody> {
             WelcomeText(),
             SizedBox(height:hp(20)),
             searchBar(),
+            SizedBox(height:hp(20)),
+            MianView(),
 
           ]
         ),
@@ -32,12 +33,15 @@ class _HomeBodyState extends State<HomeBody> {
     );
   }
   searchBar(){
-    return new TextFieldWidget(
-      prefixIconData: Icons.search,
-      obscText: false,
-      hintext: "search for meals, dishes",
-      nolabel: true,
+    return Container(
+      padding:  EdgeInsets.symmetric(horizontal:wp(34)),
+      child: new TextFieldWidget(
+        prefixIconData: Icons.search,
+        obscText: false,
+        hintext: "search for meals, dishes",
+        nolabel: true,
 
+      ),
     );
   }
 }
