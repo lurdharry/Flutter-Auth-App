@@ -1,4 +1,5 @@
 import 'package:TestApp/common/util.dart';
+import 'package:TestApp/screens/Carts/cart_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -14,7 +15,9 @@ class CartIcon extends StatelessWidget {
           child:SvgPicture.asset(
             "assets/icons/chart.svg"
           ) ,
-          onTap: (){}, 
+          onTap: (){
+            Navigator.pushNamed(context, CartScreen.routeName);
+          }, 
         )
       ),
     );
