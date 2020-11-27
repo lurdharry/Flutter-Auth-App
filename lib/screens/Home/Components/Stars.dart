@@ -22,23 +22,38 @@ class Ratings extends StatelessWidget {
     );
   }
 }
-
+// double jj =hp(14);
 class RowText extends StatelessWidget {
+  final FontWeight leftFontWeight;
+  final FontWeight rightFontWeight;
+  final double rightFontSize,padding;
+  final String leftText, rightText;
+
+
+  const RowText({
+    Key key, 
+    this.leftFontWeight=FontWeight.w600, 
+    this.rightFontWeight=FontWeight.w100, 
+    this.rightFontSize, this.leftText="Recommended", this.rightText="View all", 
+    this.padding=34,
+    }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding:  EdgeInsets.symmetric(horizontal:wp(34)),
+      width: double.infinity,
+      padding:  EdgeInsets.symmetric(horizontal:padding),
       child: Row(
         children: [
           new CustomText(
             isTap: false,
-            title:"Recommended",
+            title:leftText,
             weight: FontWeight.w600,  
           ),
           Spacer(),
           new CustomText(
             isTap: false,
-            title:"View all",
+            title:rightText,
+            fontsize: rightFontSize,
             // weight: FontWeight.w600,  
           ),
         ],

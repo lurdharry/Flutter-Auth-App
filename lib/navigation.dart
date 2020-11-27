@@ -1,4 +1,4 @@
-
+import 'package:TestApp/screens/Carts/cart_screen.dart';
 import 'package:TestApp/screens/Home/homeScreen.dart';
 import 'package:TestApp/screens/Login/login_screen.dart';
 import 'package:TestApp/screens/signUpscreen/signupscreen.dart';
@@ -12,5 +12,6 @@ import 'package:flutter/widgets.dart';
 final Map<String, WidgetBuilder> navigation  = {
   LoginScreen.routeName: (context) => LoginScreen(),
   SignUpScreen.routeName: (context) => SignUpScreen(),
-  HomeScreen.routeName:(context)=>HomeScreen(),
+  HomeScreen.routeName:(context)=>  HomeScreen(),
+  CartScreen.routeName:(context)=>  CartScreen(),
 };

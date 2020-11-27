@@ -28,3 +28,13 @@ double wp(double inputWidth) {
   // 375 is the layout width that designer use
   return (inputWidth / 375.0) * screenWidth;
 }
+
+String toMoney (String value){
+  return value.replaceAll(RegExp(r'\B(?=(\d{3})+(?!\d))'), ',');
+}
+
+// export const toMoney = num => {
+//   return parseFloat(num)
+//     .toFixed(0)
+//     .replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+// };
