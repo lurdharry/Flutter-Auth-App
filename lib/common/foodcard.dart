@@ -1,13 +1,14 @@
 import 'package:TestApp/common/text.dart';
 import 'package:TestApp/common/util.dart';
-import 'package:TestApp/models/foods.dart';
+import 'package:TestApp/models/fmodel.dart';
 import 'package:TestApp/screens/Home/Components/Stars.dart';
 import 'package:flutter/material.dart';
 
 class FoodCard extends StatelessWidget {
-  final Foods ooo;
+  // final Foods ooo;
+  final FoodModel ooo;
 
-  const FoodCard({Key key, this.ooo}) : super(key: key);
+  FoodCard( this.ooo) ;
   @override
   Widget build(BuildContext context) {
     return Column(
