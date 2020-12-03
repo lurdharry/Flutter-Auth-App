@@ -3,10 +3,13 @@ import 'package:TestApp/common/color.dart';
 import 'package:TestApp/common/text.dart';
 import 'package:TestApp/common/util.dart';
 import 'package:TestApp/models/recommended.dart';
+import 'package:TestApp/screens/Carts/controller.dart';
 import 'package:TestApp/screens/Home/Components/Stars.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class CartItemList extends StatelessWidget {
+  final CartController controller = Get.find();
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -17,8 +20,8 @@ class CartItemList extends StatelessWidget {
         child: Column(
           children: [
             ...List.generate(
-              dummyRecoData.length, (index) => 
-              CartCard(newCart:dummyRecoData[index])
+              controller.cart.length, (index) => 
+              CartCard(controller.cart[index])
             ),
             // SizedBox(height:hp(40)),
             new RowText(
@@ -34,71 +37,7 @@ class CartItemList extends StatelessWidget {
               onPress:(){},
               bgColor: darkBrown,
             ),
-                        ButtonWidget(
-              title:'CHECKOUT',
-              onPress:(){},
-              bgColor: darkBrown,
-            ),
-                        ButtonWidget(
-              title:'CHECKOUT',
-              onPress:(){},
-              bgColor: darkBrown,
-            ),
-                        ButtonWidget(
-              title:'CHECKOUT',
-              onPress:(){},
-              bgColor: darkBrown,
-            ),
-                                   ButtonWidget(
-              title:'CHECKOUT',
-              onPress:(){},
-              bgColor: darkBrown,
-            ),
-                                              ButtonWidget(
-              title:'CHECKOUT',
-              onPress:(){},
-              bgColor: darkBrown,
-            ),
-                                              ButtonWidget(
-              title:'CHECKOUT',
-              onPress:(){},
-              bgColor: darkBrown,
-            ),
-                                              ButtonWidget(
-              title:'CHECKOUT',
-              onPress:(){},
-              bgColor: darkBrown,
-            ),
-                                              ButtonWidget(
-              title:'CHECKOUT',
-              onPress:(){},
-              bgColor: darkBrown,
-            ),
-                                              ButtonWidget(
-              title:'CHECKOUT',
-              onPress:(){},
-              bgColor: darkBrown,
-            ),
-                                              ButtonWidget(
-              title:'CHECKOUT',
-              onPress:(){},
-              bgColor: darkBrown,
-            ),
-                                              ButtonWidget(
-              title:'CHECKOUT',
-              onPress:(){},
-              bgColor: darkBrown,
-            ),
-                                              ButtonWidget(
-              title:'CHECKOUT',
-              onPress:(){},
-              bgColor: darkBrown,
-            ),
-                                              ButtonWidget(
-              title:'CHECKOUT',
-              onPress:(){},
-              bgColor: darkBrown,
-            ),
+                       
 
           ],
         ),
@@ -109,9 +48,9 @@ class CartItemList extends StatelessWidget {
 
 
 class CartCard extends StatelessWidget {
-  final RecoItem newCart;
+  final CartModel newCart;
 
-  const CartCard({Key key, this.newCart}) : super(key: key);
+  const CartCard( this.newCart) ;
   @override
   Widget build(BuildContext context) {
     String price = toMoney(newCart.price);

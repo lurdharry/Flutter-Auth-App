@@ -17,7 +17,7 @@ class HomeController  extends GetxController {
               name:item.name,
               ratiing: item.ratiing,
               toppings: item.toppings
-            )).toList()
+            ))
         );
   }
 }

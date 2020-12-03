@@ -1,8 +1,11 @@
 import 'package:TestApp/common/util.dart';
-import 'package:TestApp/models/recommended.dart';
+import 'package:TestApp/screens/Carts/controller.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class  ListMe extends StatelessWidget {
+  final CartController props = Get.put<CartController>(CartController());
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -11,8 +14,7 @@ class  ListMe extends StatelessWidget {
         padding:  EdgeInsets.only(left:wp(34)),
         child: Row(
           children:[
-            ...List.generate(dummyRecoData.length, (index) => items(index)),
-            ...List.generate(dummyRecoData.length, (index) => items(index))
+            ...List.generate(props.cart.length, (index) => items(index)),
           ]
         ),
       )
@@ -23,12 +25,12 @@ class  ListMe extends StatelessWidget {
     return Row(
       children: [
         Image(
-          image: AssetImage(dummyRecoData[index].image),
+          image: AssetImage(props.cart[index].image),
           height: hp(70),
           width: wp(63),
           fit: BoxFit.contain,
         ),
-        SizedBox( width:wp(10))
+        SizedBox( width:wp(10)),
       ],
     );
   }
