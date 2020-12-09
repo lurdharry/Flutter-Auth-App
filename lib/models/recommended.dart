@@ -2,6 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 
+
+
+
+
+
+
+
 List<CartModel> dummyRecoData =[
   new CartModel(
     key :1,
@@ -26,7 +33,7 @@ List<CartModel> dummyRecoData =[
     price: "7566"
   ),
   new CartModel(
-    key :3,
+    key :4,
     image: "assets/images/4.png",
     name: "Cheese Burger",
     toppings: "Beef, Veggies & Chilli",
