@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 
 class FoodCard extends StatelessWidget {
   // final Foods ooo;
-  final FoodModel ooo;
+  final Food ooo;
 
   FoodCard( this.ooo) ;
   @override
