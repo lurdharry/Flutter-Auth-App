@@ -13,7 +13,7 @@ class CartScreen extends StatelessWidget {
 
 return GetBuilder<CartController>(
   init: CartController(),
-  builder: (contrller){
+  builder: (controller){
     return Scaffold(
       body: CartBody(),
       bottomNavigationBar: BottomBox(), 

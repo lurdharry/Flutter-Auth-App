@@ -3,11 +3,13 @@ import 'package:TestApp/common/ButtonWidget.dart';
 import 'package:TestApp/common/color.dart';
 import 'package:TestApp/common/textInput.dart';
 import 'package:TestApp/common/util.dart';
+import 'package:TestApp/controllers/login_controller.dart';
 import 'package:TestApp/screens/Login/components/doubleColorText.dart';
 import 'package:TestApp/screens/Login/components/modalContetn.dart';
 import 'package:TestApp/screens/Login/components/topImage.dart';
 import 'package:TestApp/screens/Login/login_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class Body extends StatefulWidget {
 
@@ -18,7 +20,11 @@ class Body extends StatefulWidget {
 }
 
 class _BodyState extends State<Body> {
-    var myController = TextEditingController();
+    var myController = TextEditingController(); 
+    bool yes=false;
+    String email ='';
+    final controller = Get.put(LoginController());
+
     // var myCo = myController.selection.
     // var dgd =_myController.selection = TextSelection.collapsed(offset: newText.length);
 void initState() {
@@ -57,6 +63,13 @@ void initState() {
                       hintext:'Username',
                       prefixIconData: Icons.email_outlined,
                       obscText: false,
+                      onGhange: (value){
+                        if(value.length==5){
+                        setState(() {
+                          email=value;
+                        });
+                        }
+                      },
                     ),
                   SizedBox(height:20.0),
                   TextFieldWidget(
@@ -67,6 +80,7 @@ void initState() {
               
                   SizedBox(height:20.0),
                   TextFieldWidget(
+                    
                     hintext:'Password',
                     prefixIconData: Icons.lock_outline,
                     obscText: false,
@@ -87,7 +101,9 @@ void initState() {
                     bgColor: darkBrown,
                     titleColor: Colors.white,
                     onPress: (){
-                      show.body(context, SignUpBottomSheet(), hp(425));
+                      // print(email);
+                      // controller
+                      // show.body(context, SignUpBottomSheet(), hp(425));
                     },
                   ),
                   SizedBox(height:hp(20)),

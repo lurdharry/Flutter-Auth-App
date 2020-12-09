@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 
 class HomeController  extends GetxController {
 
-  RxList<FoodModel> foods = RxList<FoodModel>([]);
+  RxList<Food> foods = RxList<Food>();
 
 
   HomeController(){
@@ -11,7 +11,7 @@ class HomeController  extends GetxController {
   }
 
   loadCategories() {
-    foods.addAll(dummyfoods.map<FoodModel>((item) => FoodModel(
+    foods.addAll(dummyfoods.map<Food>((item) => Food(
               id: item.id,
               image: item.image,
               name:item.name,

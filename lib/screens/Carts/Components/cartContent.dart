@@ -9,7 +9,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class CartItemList extends StatelessWidget {
-  final CartController controller = Get.find();
+  final   controller = Get.put(CartController());
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -21,7 +22,7 @@ class CartItemList extends StatelessWidget {
           children: [
             ...List.generate(
               controller.cart.length, (index) => 
-              CartCard(controller.cart[index])
+              CartCard(controller.cart[index],()=>controller.removeItem(controller.cart[index].key),)
             ),
             // SizedBox(height:hp(40)),
             new RowText(
@@ -34,7 +35,7 @@ class CartItemList extends StatelessWidget {
             SizedBox(height:hp(41)),
             ButtonWidget(
               title:'CHECKOUT',
-              onPress:(){},
+              onPress:controller.placeOrder,
               bgColor: darkBrown,
             ),
                        
@@ -49,8 +50,9 @@ class CartItemList extends StatelessWidget {
 
 class CartCard extends StatelessWidget {
   final CartModel newCart;
+  final Function  remove;
 
-  const CartCard( this.newCart) ;
+ CartCard( this.newCart, this.remove,) ;
   @override
   Widget build(BuildContext context) {
     String price = toMoney(newCart.price);
@@ -98,7 +100,7 @@ class CartCard extends StatelessWidget {
                       weight: FontWeight.w500,
                     ),
                     GestureDetector(
-                      onTap: (){},
+                      onTap: remove,
                       child: Container(
                         width: hp(30),
                         height: hp(30),

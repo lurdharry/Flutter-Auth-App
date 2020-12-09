@@ -5,7 +5,6 @@ import 'package:get/get.dart';
 
 class  ListMe extends StatelessWidget {
   final CartController props = Get.put<CartController>(CartController());
-
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(

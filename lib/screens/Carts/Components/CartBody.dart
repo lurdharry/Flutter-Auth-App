@@ -15,7 +15,7 @@ class _CartBodyState extends State<CartBody> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children:[
           CartText(),
-          CartItemList()
+          CartItemList(),
         ]
       ),
       

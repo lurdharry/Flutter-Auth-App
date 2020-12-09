@@ -7,7 +7,7 @@ class SignUpScreen extends StatelessWidget {
     static String routeName = "/signUp";
   @override
   Widget build(BuildContext context) {
-    SizeConfig().init(context);
+    Utils().init(context);
     return Scaffold(
             // resizeToAvoidBottomInset: false,   //new lin
       body:Body(),
